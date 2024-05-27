@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+       <div class="container mx-auto grid grid-cols-4 gap-5 p-10">
+              <div class="card bg-base-100 border">
+                     <figure class="px-10 pt-10">
+                            <img src="images/triangle.png" alt="triangle" class="rounded-xl h-44" />
+                     </figure>
+                     <div class="card-body items-center text-center p-4 gap-y-4">
+                            <h2 class="card-title" id="tri-id">Triangle</h2>
+                            <p>Area (A) = 0.5 × b × h</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          b
+                                          <input type="number" class="w-full" id="tri-b" /> <span>cm</span>
+                                   </label>
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          h
+                                          <input type="number" class="w-full" id="tri-h" /> <span>cm</span>
+                                   </label>
+                            </div>
+                            <div class="card-actions">
+                                   <button class="btn btn-primary w-48" id="tri-btn">Calculate</button>
+                            </div>
+                     </div>
+              </div>
+              <div class="card bg-base-100 border">
+                     <figure class="px-10 pt-10">
+                            <img src="images/rectangle.png" alt="rectangle" class="rounded-xl h-44" />
+                     </figure>
+                     <div class="card-body items-center text-center p-4 gap-y-4">
+                            <h2 class="card-title" id="r-id">Rectangle</h2>
+                            <p>Area (A) = w × l</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          w
+                                          <input type="number" class="w-full" id="r-w" /> <span>cm</span>
+                                   </label>
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          l
+                                          <input type="number" class="w-full" id="r-l" /> <span>cm</span>
+                                   </label>
+                            </div>
+                            <div class="card-actions">
+                                   <button class="btn btn-primary w-48" id="rect-btn">Calculate</button>
+                            </div>
+                     </div>
+              </div>
+              <div class="card bg-base-100 border">
+                     <figure class="px-10 pt-10">
+                            <img src="images/parallelogram.png" class="rounded-xl h-44" />
+                     </figure>
+                     <div class="card-body items-center text-center p-4 gap-y-4">
+                            <h2 class="card-title" id="p-id">Parallelogram</h2>
+                            <p>Area (A) = b × h</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          b
+                                          <input type="number" class="w-full" id="p-b" /> <span>cm</span>
+                                   </label>
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          h
+                                          <input type="number" class="w-full" id="p-h" /> <span>cm</span>
+                                   </label>
+                            </div>
+
+                            <div class="card-actions">
+                                   <button class="btn btn-primary w-48" id="p-btn">Calculate</button>
+                            </div>
+                     </div>
+              </div>
+              <div class="card bg-base-100 border">
+                     <h2 class="text-xl text-center font-bold underline py-5">Area Calculation</h2>
+                     <div id="area" class="px-6">
+                     </div>
+              </div>
+              <div class="card bg-base-100 border">
+                     <figure class="px-10 pt-10">
+                            <img src="images/rhombus.png" alt="rhombus" class="rounded-xl h-44" />
+                     </figure>
+                     <div class="card-body items-center text-center p-4 gap-y-4">
+                            <h2 class="card-title" id="rhom-id">Rhombus</h2>
+                            <p>Area (A) = 0.5 × d1 × d2</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          d1
+                                          <input type="number" class="w-full" id="rhom-d1" /> <span>cm</span>
+                                   </label>
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          d2
+                                          <input type="number" class="w-full" id="rhom-d2" /> <span>cm</span>
+                                   </label>
+                            </div>
+
+                            <div class="card-actions">
+                                   <button class="btn btn-primary w-48" id="rhom-btn">Calculate</button>
+                            </div>
+                     </div>
+              </div>
+              <div class="card bg-base-100 border">
+                     <figure class="px-10 pt-10">
+                            <img src="images/pentagon.png" alt="pentagon" class="rounded-xl h-44" />
+                     </figure>
+                     <div class="card-body items-center text-center p-4 gap-y-4">
+                            <h2 class="card-title" id="pent-id">Pentagon</h2>
+                            <p>Area (A) = 0.5 × p × b</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          p
+                                          <input type="number" class="w-full" id="pent-p" /> <span>cm</span>
+                                   </label>
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          b
+                                          <input type="number" class="w-full" id="pent-b" /> <span>cm</span>
+                                   </label>
+                            </div>
+
+                            <div class="card-actions">
+                                   <button class="btn btn-primary w-48" id="pent-btn">Calculate</button>
+                            </div>
+                     </div>
+              </div>
+              <div class="card bg-base-100 border">
+                     <figure class="px-10 pt-10">
+                            <img src="images/ellipse.png" alt="ellipse" class="h-44" />
+                     </figure>
+                     <div class="card-body items-center text-center p-4 gap-y-4">
+                            <h2 class="card-title" id="elli-id">Ellipse</h2>
+                            <p>Area (A) = πab</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          a
+                                          <input type="number" class="w-full" id="elli-a" /> <span>cm</span>
+                                   </label>
+                                   <label class="input input-bordered flex items-center gap-2">
+                                          b
+                                          <input type="number" class="w-full" id="elli-b" /> <span>cm</span>
+                                   </label>
+                            </div>
+
+                            <div class="card-actions">
+                                   <button class="btn btn-primary w-48" id="elli-btn">Calculate</button>
+                            </div>
+                     </div>
+              </div>
+       </div>
+
+       <script src="js/main.js"></script>
+</body>
+
+</html>
